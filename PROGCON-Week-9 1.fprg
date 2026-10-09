@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PROGCON-Week-9"/>
+        <attribute name="authors" value="Jasmin Junas"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-09 11:25:58 AM"/>
+        <attribute name="created" value="SmFzbWluIEp1bmFzO0xBUFRPUC1SUDhWMlJSUjsyMDI2LTEwLTA5OzExOjE3OjU2IEFNOzM1MzQ="/>
+        <attribute name="edited" value="SmFzbWluIEp1bmFzO0xBUFRPUC1SUDhWMlJSUjsyMDI2LTEwLTA5OzExOjI1OjU4IEFNOzE7MzY0Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rainbowColors" type="String" array="True" size="7"/>
+            <declare name="correctColors" type="String" array="True" size="7"/>
+            <assign variable="correctColors[0]" expression="&quot;Red&quot;"/>
+            <assign variable="correctColors[1]" expression="&quot;Orange&quot;"/>
+            <assign variable="correctColors[2]" expression="&quot;Yellow&quot;"/>
+            <assign variable="correctColors[3]" expression="&quot;Green&quot;"/>
+            <assign variable="correctColors[4]" expression="&quot;Blue&quot;"/>
+            <assign variable="correctColors[5]" expression="&quot;Indigo&quot;"/>
+            <assign variable="correctColors[6]" expression="&quot;Violet&quot;"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Hello and welcome!&quot;" newline="True"/>
+            <output expression="&quot;Instruction: Type each color with the first letter in CAPITAL and do not put spaces before or after the word:&quot;" newline="True"/>
+            <for variable="i" start="0" end="6" direction="inc" step="1">
+                <output expression="&quot;Please enter color &quot; &amp; (i + 1) &amp; &quot; of the rainbow:&quot;" newline="True"/>
+                <input variable="rainbowColors[i]"/>
+                <if expression="rainbowColors[i] = correctColors[i]">
+                    <then>
+                        <output expression="&quot;Correct!&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <assign variable="i" expression="- 1"/>
+                        <output expression="&quot;Wrong color input!&quot;" newline="True"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Great! Now you know the colors of the rainbow!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
